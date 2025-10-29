@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global light/dark text fix */
+@layer base {
+  /* Apply to every element */
+  * {
+    @apply text-gray-700 dark:text-gray-300 !important;
+  }
+
+  /* Headings slightly darker */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-gray-900 dark:text-white !important;
+  }
+
+  /* Links */
+  a {
+    @apply text-gray-800 dark:text-gray-200 !important;
+  }
+
+  /* Muted text */
+  .muted {
+    @apply text-gray-500 dark:text-gray-400 !important;
+  }
+}
+
+
+:root{
+  --bg: #071126;
+  --card: rgba(255,255,255,0.04);
+  --primary: #06b6d4;
+  --accent: #0ea5b7;
+}
+
+html,body,#root{height:100%}
+body{
+  @apply bg-[var(--bg)] text-gray-100 antialiased font-poppins;
+  background-image: radial-gradient(circle at 10% 10%, rgba(6,182,212,0.02), transparent 8%);
+}
+
+/* glass card */
+.glass {
+  /* Light mode: 77% opacity for strong visibility */
+  background: rgba(255, 255, 255, 0.77);  
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.1);  /* subtle border for light mode */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+  transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark mode: frosted dark glass */
+.dark .glass {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* simple loading */
+#site-loader{
+  position:fixed;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background: rgba(7,17,38,0.6);
+  z-index:9999;
+}
+.spinner{
+  width:56px; height:56px; border-radius:50%;
+  border:6px solid rgba(255,255,255,0.08);
+  border-top-color: var(--primary);
+  animation: spin 1s linear infinite;
+}
+@keyframes spin{ to { transform: rotate(360deg); }}
+
+/* back-to-top */
+#backTop{
+  position:fixed;
+  right:20px;
+  bottom:24px;
+  z-index:50;
+}
+
+
+
+/* Added: responsive two-column layout and nav spacing */
+.container { display: flex; gap: 1rem; flex-wrap: wrap; }
+.center1, .center2 { flex: 1 1 300px; min-width: 260px; }
+nav ul { display: flex; gap: 1rem; justify-content: space-evenly; list-style: none; padding: 0; margin: 0; }
+@media (max-width: 600px) {
+  .container { flex-direction: column; }
+  nav ul { flex-direction: column; align-items: stretch; }
+}
