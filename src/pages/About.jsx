@@ -14,7 +14,7 @@ export default function About(){
 
         <div className="md:col-span-2">
           <h2 className="text-2xl font-bold">About Me</h2>
-          <p className="mt-4 text-gray-300">I'm a MCA student with a strong interest in building reliable, secure and scalable cloud infrastructures. I love automating repetitive tasks, designing CI/CD pipelines, and applying infrastructure-as-code with Terraform. My typical stack includes AWS, EKS, Docker, Kubernetes, Prometheus/Grafana, and Git-based CI systems.</p>
+          <p className="mt-4 text-gray-300">I'm a MCA student with a strong interest in building reliable, secure and scalable cloud infrastructures. I love automating repetitive tasks, designing CI/CD pipelines, and applying infrastructure-as-code with Terraform. My typical stack includes AWS, EKS, Docker, Kubernetes, Terraform, git, and Git-based CI systems, github, github-actions.</p>
 
           <h3 className="mt-6 font-semibold">Experience Highlights</h3>
           <ul className="list-disc list-inside text-gray-300 mt-2 space-y-2">
