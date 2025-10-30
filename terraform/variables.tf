@@ -10,7 +10,7 @@ variable "region" {
 
 variable "site_bucket_name" {
   type    = string
-  default = "my-portfolio-unique-12345"
+  default = "my-portfolio-29"
 }
 
 variable "domain_name" {
@@ -28,11 +28,11 @@ variable "hosted_zone_id" {
 variable "sender_email" {
   type        = string
   description = "SES verified sender (if not using domain identity)."
-  default     = "no-reply@example.com"
+  default     = "100rajpootking100@gmail.com"
 }
 
 variable "recipient_email" {
   type        = string
   description = "Recipient of contact form messages."
-  default     = "you@example.com"
+  default     = "feb29deepak@gmail.com"
 }
