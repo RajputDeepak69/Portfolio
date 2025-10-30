@@ -7,7 +7,7 @@ export default function About(){
         <div className="md:col-span-1">
           <div className="glass rounded-xl p-5 flex flex-col items-center">
             <div className="w-32 h-32 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-black font-bold">DE</div>
-            <h3 className="mt-4 font-semibold">Itzz DEEPAK</h3>
+            <h3 className="mt-4 font-semibold">Deepak Thakur </h3>
             <p className="text-xs text-gray-400 mt-1">DevOps Engineer • Cloud Enthusiast</p>
           </div>
         </div>
