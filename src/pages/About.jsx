@@ -14,18 +14,20 @@ export default function About(){
 
         <div className="md:col-span-2">
           <h2 className="text-2xl font-bold">About Me</h2>
-          <p className="mt-4 text-gray-300">I'm a DevOps engineer focused on building reliable, secure and scalable cloud infrastructures. I love automating repetitive tasks, designing CI/CD pipelines, and applying infrastructure-as-code with Terraform. My typical stack includes AWS, EKS, Docker, Kubernetes, Prometheus/Grafana, and Git-based CI systems.</p>
+          <p className="mt-4 text-gray-300">I'm a MCA student with a strong interest in building reliable, secure and scalable cloud infrastructures. I love automating repetitive tasks, designing CI/CD pipelines, and applying infrastructure-as-code with Terraform. My typical stack includes AWS, EKS, Docker, Kubernetes, Prometheus/Grafana, and Git-based CI systems.</p>
 
           <h3 className="mt-6 font-semibold">Experience Highlights</h3>
           <ul className="list-disc list-inside text-gray-300 mt-2 space-y-2">
-            <li>Designed highly available microservice deployments on AWS EKS with Terraform.</li>
-            <li>Built CI/CD pipelines with Jenkins & GitHub Actions to automate releases.</li>
-            <li>Implemented monitoring & alerting with Prometheus, Alertmanager and Grafana.</li>
+            <li>Designed an auto scalable and auto healing a deployment on AWS EC2 with Terraform.</li>
+            <li>Built CI/CD pipelines with GitHub Actions to automate releases.</li>
+            <li>Implemented monitoring & alerting with CloudWatch.</li>
+            <li>Containirized 2-tier cloud app and managed deployment with Docker-Compose</li>
+            <li>Currently working on a 3-tier e-commerce web app ..</li>
           </ul>
 
           <h3 className="mt-6 font-semibold">Tools & Platforms</h3>
           <div className="mt-3 grid grid-cols-2 md:grid-cols-4 gap-2">
-            {['AWS','Docker','Kubernetes','Terraform','Ansible','Jenkins','Prometheus','Grafana'].map(t=>(
+            {['AWS','Docker & Docker-Hub','Kubernetes','Terraform','azure','git','github','github-actions'].map(t=>(
               <div key={t} className="glass rounded px-3 py-2 text-sm text-gray-200">{t}</div>
             ))}
           </div>
