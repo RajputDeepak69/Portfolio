@@ -1,35 +1,10 @@
 import React from 'react'
 
 const certs = [
-  {
-    title: "AWS Certified Cloud Practitioner",
-    org: "Amazon Web Services",
-    img: "/images/aws-fundamental.png",
-  },
-  {
-    title: "Intro. to Linux",
-    org: "The Linux Foundation",
-    img: "/images/Linux-cert.png",
-    link: "https://www.credly.com/badges/165a55fb-e569-446f-94ca-663700f8eb01/public_url",
-  },
-  {
-    title: "AWS Educate web builder",
-    org: "Amazon Web Services",
-    img: "/images/web-builder.png",
-    link: "https://www.credly.com/badges/098220af-93d1-46da-9647-ef2c6221d527/public_url",
-  },
-  {
-    title: "AWS Cloud Quest: Cloud-Practitioner",
-    org: "Amazon Web Services",
-    img: "/images/cloud-quest.png",
-    link: "https://www.credly.com/badges/6ef94c53-bbe9-4f83-b5dd-7bba778302aa/public_url",
-  },
-  {
-    title: "Cloud Devops",
-    org: "Intel",
-    img: "/images/devops-badge.png",
-    link: "hhttps://www.credly.com/badges/97356829-1493-4917-a543-899ea174ccc9/public_url",
-  },
+  {title:'AWS Certified Cloud Practitioner', org:'Amazon'},
+  {title:'Azure Fundamentals', org:'Microsoft'},
+  {title:'Linux Foundation', org:'Linux Foundation'},
+  {title:'Docker Certified Associate', org:'Docker'}
 ]
 
 export default function Certifications(){
