@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const certs = [
   {
@@ -30,37 +30,23 @@ const certs = [
     img: "/images/devops-badge.png",
     link: "hhttps://www.credly.com/badges/97356829-1493-4917-a543-899ea174ccc9/public_url",
   },
-];
+]
 
-export default function Certifications() {
+export default function Certifications(){
   return (
     <div className="max-w-6xl mx-auto px-4 py-16">
-      <h2 className="text-3xl font-bold text-center mb-2">Certifications & Badges</h2>
-      <p className="text-gray-400 text-center mb-10">
-        Verified certificates and badges.
-      </p>
+      <h2 className="text-2xl font-bold">Certifications</h2>
+      <p className="text-gray-400 mt-2">Official certificates and recognitions.</p>
 
-      <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {certs.map((c) => (
-          <a
-            key={c.title}
-            href={c.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group glass rounded-xl p-5 flex flex-col items-center text-center transition hover:scale-105 hover:shadow-lg"
-          >
-            <div className="w-24 h-24 mb-3 overflow-hidden rounded-full bg-white/10 flex items-center justify-center">
-              <img
-                src={c.img}
-                alt={c.title}
-                className="object-contain w-full h-full group-hover:scale-110 transition"
-              />
-            </div>
-            <h3 className="font-semibold text-lg">{c.title}</h3>
-            <p className="text-sm text-gray-400">{c.org}</p>
-          </a>
+      <div className="mt-6 grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+        {certs.map(c=>(
+          <div key={c.title} className="glass rounded-lg p-4 flex flex-col items-center text-center">
+            <div className="w-20 h-12 bg-white/4 rounded flex items-center justify-center text-xs">{c.org}</div>
+            <div className="mt-3 font-medium">{c.title}</div>
+            <div className="text-xs text-gray-400 mt-1">{c.org}</div>
+          </div>
         ))}
       </div>
     </div>
-  );
+  )
 }
