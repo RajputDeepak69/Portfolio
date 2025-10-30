@@ -22,6 +22,7 @@ export default function About(){
             <li>Built CI/CD pipelines with GitHub Actions to automate releases.</li>
             <li>Implemented monitoring & alerting with CloudWatch.</li>
             <li>Containirized 2-tier cloud app and managed deployment with Docker-Compose</li>
+            <li>This web-site too (using the devops practices)</li>
             <li>Currently working on a 3-tier e-commerce web app ..</li>
           </ul>
 

@@ -22,7 +22,7 @@ export default function Contact(){
         </div>
       </form>
 
-      <div className="mt-8 text-sm text-gray-400">Or reach me at <a href="mailto:you@example.com" className="text-primary">you@example.com</a></div>
+      <div className="mt-8 text-sm text-gray-400">Or reach me at <a href="feb29deepak@gmail.com" className="text-primary">you@example.com</a></div>
     </div>
   )
 }
