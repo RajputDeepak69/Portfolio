@@ -5,7 +5,7 @@ const certs = [
     title: "AWS Certified Cloud Practitioner",
     org: "Amazon Web Services",
     img: "/images/aws-fundamental.png",
-    link: "https://www.credly.com/badges/your-aws-cert-link",
+    link: "https://www.linkedin.com/posts/thakur-deepak29_aws-cloudpractitioner-cloudcomputing-activity-7356715823371046912-s-cK?utm_source=share&utm_medium=member_desktop&rcm=ACoAAE1EFNcBkKaGH090O-R5Sywnx7RzMAFq4D0",
   },
   {
     title: "Intro. to Linux",

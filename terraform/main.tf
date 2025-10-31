@@ -11,13 +11,11 @@ provider "aws" {
   region = var.region
 }
 
-# For CloudFront ACM lookups (if you later add ACM cert in us-east-1)
 provider "aws" {
   alias  = "us_east_1"
   region = "us-east-1"
 }
 
-# S3 bucket
 resource "aws_s3_bucket" "site" {
   bucket         = var.site_bucket_name
   force_destroy  = true
@@ -26,7 +24,6 @@ resource "aws_s3_bucket" "site" {
   }
 }
 
-# Attach bucket ownership & ACL configuration
 resource "aws_s3_bucket_ownership_controls" "ownership" {
   bucket = aws_s3_bucket.site.id
   rule {
@@ -48,7 +45,6 @@ resource "aws_s3_bucket_acl" "public_acl" {
   acl        = "public-read"
 }
 
-# Website hosting config
 resource "aws_s3_bucket_website_configuration" "site" {
   bucket = aws_s3_bucket.site.id
 
@@ -79,7 +75,6 @@ resource "aws_s3_bucket_policy" "public_policy" {
   policy = data.aws_iam_policy_document.public.json
 }
 
-# IAM role for Lambda
 data "aws_iam_policy_document" "lambda_assume" {
   statement {
     actions = ["sts:AssumeRole"]
@@ -120,7 +115,6 @@ resource "aws_iam_role_policy" "lambda_policy" {
   policy = data.aws_iam_policy_document.lambda_policy.json
 }
 
-# Package lambda (archive_file requires the archive_file provider built-in)
 data "archive_file" "lambda_zip" {
   type        = "zip"
   source_dir  = "${path.module}/../lambda"
@@ -144,7 +138,6 @@ resource "aws_lambda_function" "contact" {
   }
 }
 
-# HTTP API (API Gateway v2)
 resource "aws_apigatewayv2_api" "http_api" {
   name          = "${var.project_name}-http-api"
   protocol_type = "HTTP"
@@ -178,10 +171,6 @@ resource "aws_apigatewayv2_stage" "default" {
   auto_deploy = true
 }
 
-# CloudFront distribution for S3 website (uses default CloudFront cert)
-###############################################
-# CloudFront Distribution (Modern)
-###############################################
 resource "aws_cloudfront_origin_access_control" "oac" {
   name                  = "portfolio-oac"
   description           = "Access control for S3 bucket"
