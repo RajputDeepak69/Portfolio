@@ -76,8 +76,6 @@ my-portfolio/
 
      ├── lambda/ # Lambda function code (contact form)
 
-     ├── Dockerfile # Docker setup for local build/test
-
      ├── .github/workflows/ # CI/CD pipeline definitions
 
      ├── package.json # Frontend dependencies
@@ -137,4 +135,4 @@ It’s a showcase of how I work.
 
 “I don’t just write code — I build systems that run themselves.”
 
-© 2025 Itzz DEEPAK — DevOps & Cloud Portfolio
+© 2026 DEEPAK — DevOps & Cloud Portfolio
