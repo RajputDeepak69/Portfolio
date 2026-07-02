@@ -1,9 +1,14 @@
 import json, boto3, os, base64
+from dotenc import load_dotenv
 
-ses = boto3.client('ses', region_name=os.environ.get('AWS_REGION', 'us-east-1'))
-SENDER = os.environ.get('SENDER_EMAIL', '100rajpootking100@gmail.com')
-RECIPIENT = os.environ.get('RECIPIENT_EMAIL', 'feb29deepak@gmail.com')
+load_dotenv()
+ses = boto3.client(
+    "ses",
+    region_name=os.getenv("AWS_REGION")
+)
 
+SENDER = os.getenv("SENDER_EMAIL")
+RECIPIENT = os.getenv("RECIPIENT_EMAIL")
 def lambda_handler(event, context):
     try:
         if event.get("requestContext", {}).get("http", {}).get("method") == "OPTIONS":
